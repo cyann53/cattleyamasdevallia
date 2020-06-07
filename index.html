@@ -27,7 +27,71 @@
     </ul>
 <br>
 <div>
+<div class="slideshow"><style>
 
+.slideshow {
+
+   width: 300px;
+
+   height: 300px;
+
+   overflow: hidden;
+
+   border: 3px solid #F2F2F2;
+
+}
+
+.slideshow ul {
+
+    /* 3 images donc 4 x 100% */
+
+   width: 300%;
+
+   height: 300px;
+
+   padding:0; margin:0;
+
+   list-style: none;
+
+}
+
+.slideshow li {
+
+   float: left;
+
+}</style>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+
+   $(function(){
+
+      setInterval(function(){
+
+         $(".slideshow ul").animate({marginLeft:-350},800,function(){
+
+            $(this).css({marginLeft:0}).find("li:last").after($(this).find("li:first"));
+
+         })
+
+      }, 3500);
+
+   });
+
+</script>
+
+<ul>
+
+             <li><img src="/img/Dracula Radiosa.jpg" alt="" width="300" height="300" /></li>
+
+             <li><img src="http://data.over-blog-kiwi.com/1/30/51/51/20151214/ob_925e5d_essai2.jpg" alt="" width="300" height="300" /></li>
+
+             <li><img src="http://data.over-blog-kiwi.com/1/30/51/51/20151214/ob_014b51_essai3.jpg" alt="" width="300" height="300" /></li>            
+
+       </ul>
+
+</div>
 </div>
     </body>
 </html>
